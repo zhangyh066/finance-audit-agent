@@ -1,0 +1,13 @@
+{
+  "expense_type": "住宿费",
+  "department": "研发中心（演示）",
+  "cost_center_code": "CC-RD",
+  "amount": "580.00",
+  "invoice_date": "2026-11-11",
+  "invoice_code": "DEMO",
+  "invoice_number": "DEMO000201",
+  "seller_name": "示例酒店（虚构）",
+  "buyer_name": "示例科技有限公司（虚构）",
+  "city": "上海",
+  "description": "本地功能演示用合成住宿费单据，不是真实发票"
+}

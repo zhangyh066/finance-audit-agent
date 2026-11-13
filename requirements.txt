@@ -1,0 +1,5 @@
+fastapi>=0.115
+uvicorn>=0.30
+# 可选文档解析；图片 OCR 使用 Windows 自带中文识别，无云端 API
+PyMuPDF>=1.24
+python-docx>=1.1

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>衡审｜财务制度与单据智能审核</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div id="login-view" class="login-shell">
+    <section class="login-intro">
+      <div class="brand brand-light"><span class="brand-mark">衡</span><span>衡审 · Finance Control</span></div>
+      <p class="eyebrow">POLICY-DRIVEN REVIEW</p>
+      <h1>让每一笔费用<br>都有规则与证据。</h1>
+      <p class="intro-copy">将制度版本、单据字段、预算校验与人工审批串成一条可回查的业务流程。</p>
+      <div class="intro-points"><span>规则版本可追溯</span><span>人工审批有依据</span><span>会计建议不过账</span></div>
+    </section>
+    <section class="login-panel">
+      <div class="login-card">
+        <p class="eyebrow">FINANCE OPERATIONS</p><h2>欢迎回来</h2>
+        <p class="muted">登录以管理费用单据、制度规则与审批任务。</p>
+        <form id="login-form">
+          <label>账号<input name="username" autocomplete="username" placeholder="请输入账号" required></label>
+          <label>密码<input name="password" type="password" autocomplete="current-password" placeholder="请输入密码" required></label>
+          <button class="button primary full" type="submit">登录</button>
+        </form>
+        <p class="fine-print">账号由本地管理员创建。首次初始化与样例账号请参阅项目说明。</p>
+      </div>
+    </section>
+  </div>
+
+  <div id="app-shell" class="app-shell" hidden>
+    <aside class="sidebar">
+      <div class="brand brand-light"><span class="brand-mark">衡</span><span>衡审</span></div>
+      <p class="sidebar-caption">财务数字化产品工作台</p>
+      <nav id="navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-index">01</span>工作台</button>
+        <button class="nav-item" data-view="cases"><span class="nav-index">02</span>报销单据</button>
+        <button class="nav-item" data-view="policies"><span class="nav-index">03</span>制度规则</button>
+        <button class="nav-item" data-view="tools"><span class="nav-index">04</span>工具链</button>
+        <button class="nav-item" data-view="audit" data-nav-role="admin auditor"><span class="nav-index">05</span>审计日志</button>
+        <button class="nav-item" data-view="settings" data-nav-role="admin"><span class="nav-index">06</span>账号与权限</button>
+      </nav>
+      <div class="sidebar-note"><b>制度驱动审核</b><p><span id="environment-label">本地数据</span><br>人工复核 · 操作留痕</p></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div><p class="breadcrumb">财务数字化 / <span id="current-section">工作台</span></p><h1 id="page-title">工作台</h1></div><div class="account"><span id="user-name"></span><span id="user-role" class="role-tag"></span><button id="logout" class="button text">退出</button></div></header>
+      <main class="content">
+        <div class="environment-strip"><span id="environment-copy">业务数据保存在当前本地数据库</span><span class="local-tag">仅本机访问</span></div>
+        <div id="page" aria-live="polite"></div>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
